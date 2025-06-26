@@ -18,33 +18,36 @@
       height: 180px;
     }
 
-    /* 头像容器：浮挂在背景图底部 */
-    .avatar-container {
-      text-align: center;
-      margin-top: -60px;    /* 向上嵌入横幅 */
-      margin-bottom: -20px; /* 减少与导航栏空隙 */
-      position: relative;
-      z-index: 2;
+    /* 导航栏整体 */
+    nav {
+      background-color: #333;
+      padding-top: 60px;  /* 给头像悬浮空间 */
+      padding-bottom: 10px;
     }
 
-    .avatar {
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    /* 头像居中悬浮导航栏上方 */
+    .nav-avatar {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       border: 4px solid white;
       object-fit: cover;
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      background-color: white;
     }
 
-    /* 导航栏 */
-    nav {
-      background-color: #333;
-      text-align: center;
-      padding: 10px 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    nav a {
+    .nav-links a {
       color: white;
       text-decoration: none;
       padding: 12px 20px;
@@ -52,12 +55,12 @@
       font-size: 16px;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       background-color: #ddd;
       color: black;
     }
 
-    /* 页面内容 */
+    /* 页面内容部分 */
     section {
       max-width: 800px;
       margin: 0 auto;
@@ -101,18 +104,18 @@
   <!-- 背景横幅 -->
   <div class="header"></div>
 
-  <!-- 头像浮挂部分 -->
-  <div class="avatar-container">
-    <img src="avatar.jpg" alt="Avatar" class="avatar">
-  </div>
-
-  <!-- 导航栏 -->
+  <!-- 导航栏（含头像） -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#cv">CV</a>
-    <a href="#experience">Experience</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-inner">
+      <img src="avatar.jpg" class="nav-avatar" alt="Avatar" />
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#cv">CV</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
   <!-- 页面内容 -->
@@ -148,5 +151,6 @@
 
 </body>
 </html>
+
 
 
