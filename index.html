@@ -10,16 +10,16 @@
       background-color: #fff;
     }
 
-    /* 顶部横幅容器，含背景和头像 */
-    .top-container {
+    /* 背景横幅 + 头像容器 */
+    .header {
       position: relative;
-      height: 220px;
+      height: 200px;
       background-image: url('banner.jpg');
       background-size: cover;
       background-position: center;
     }
 
-    /* 头像放在横幅内，居中贴近底部 */
+    /* 头像贴在横幅底部中央 */
     .avatar {
       width: 120px;
       height: 120px;
@@ -27,19 +27,17 @@
       border: 4px solid white;
       object-fit: cover;
       position: absolute;
-      bottom: -60px;
+      bottom: 0; /* 正好贴紧横幅底部 */
       left: 50%;
       transform: translateX(-50%);
       background-color: white;
-      z-index: 10;
     }
 
-    /* 导航栏紧贴横幅底部 */
+    /* 导航栏紧贴横幅底部（不被头像挤开） */
     nav {
       background-color: #333;
       text-align: center;
       padding: 10px 0;
-      z-index: 1;
     }
 
     nav a {
@@ -55,11 +53,11 @@
       color: black;
     }
 
-    /* 页面内容区 */
+    /* 页面正文部分 */
     section {
       max-width: 800px;
       margin: 0 auto;
-      padding: 70px 16px 20px 16px; /* 顶部空间让出头像占位 */
+      padding: 30px 16px;
       text-align: left;
     }
 
@@ -97,11 +95,11 @@
 <body>
 
   <!-- 顶部横幅和头像 -->
-  <div class="top-container">
+  <div class="header">
     <img src="avatar.jpg" alt="Avatar" class="avatar">
   </div>
 
-  <!-- 导航栏 -->
+  <!-- 紧贴横幅的导航栏 -->
   <nav>
     <a href="#home">Home</a>
     <a href="#cv">CV</a>
@@ -110,7 +108,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- 页面内容 -->
+  <!-- 内容部分 -->
   <section id="home">
     <h1>Yingjie Zhao</h1>
     <p>
@@ -143,6 +141,7 @@
 
 </body>
 </html>
+
 
 
 
