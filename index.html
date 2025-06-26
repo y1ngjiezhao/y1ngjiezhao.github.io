@@ -9,33 +9,29 @@
       font-family: Arial, sans-serif;
       background-color: #fff;
     }
-
     .header {
-      background-image: url('banner.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
+  background-image: url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 150px; /* 改成和头像高度一致或略小 */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
     .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-      position: absolute;
-      bottom: -60px;
-    }
-
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+  position: absolute;
+  bottom: -60px; /* 正好让头像下半部分出现在 header 外部 */
+}
     nav {
-      background-color: #333;
-      margin-top: 60px;
-      text-align: center;
-    }
+  background-color: #333;
+  margin-top: 0; /* 移除多余空白 */
+  text-align: center;
+}
 
     nav a {
       color: white;
