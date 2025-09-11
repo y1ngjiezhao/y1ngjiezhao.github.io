@@ -106,6 +106,30 @@
     a:hover {
       color: #1027ab;
     }
+
+    /* Back to Top button */
+    #backToTopBtn {
+      display: none; /* hidden by default */
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      padding: 12px 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #backToTopBtn:hover {
+      background-color: #555;
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
@@ -173,7 +197,6 @@
   <section id="experience">
     <h2>Experience</h2>
     <ul>
-      <!-- <li>2025 – Upcoming Soon</li>内容区 -->
       <li>
         2025 – Energy Transition Center Project as <b>Research Assistant</b> from 18/Aug to mid-Nov (work with <a href="https://www.qut.edu.au/about/our-people/academic-profiles/sara.khalifa" target="_blank"> A/Prof. Sara Kahlifa</a> and other experts in ETC)
       </li>
@@ -181,7 +204,7 @@
         2025 – Capstone Project for the Master degree (under supervision of <a href="https://sites.google.com/view/mahdiabolghasemi" target="_blank">Dr. Mahdi Abolghasemi</a> and <a href="https://people.smp.uq.edu.au/XinGuo/" target="_blank">Dr. Xin Guo</a>)
       </li>
       <li>
-        2024 – Mathematical Modelling Contest: Underwater Image Recovery and Augmentation, won Third Class Prize
+        2024 – Mathematical Modelling Contest: Underwater Image Recovery and Augmentation
       </li>
       <li>
         2024 – Summer Research Program (under supervision of <a href="https://sites.google.com/view/mahdiabolghasemi" target="_blank">Dr. Mahdi Abolghasemi</a>)
@@ -190,13 +213,13 @@
         2022 – Graduation Thesis (under supervision of A/Prof. Xuebin Lv)
       </li>
       <li>
-        2021 – Mathematical Modelling Contest: Identification of Asian Bumblebee Invasion in Australia
+        2021 – Identification of Asian Bumblebee Invasion in Australia
       </li>
       <li>
-        2020 – Mathematical Modelling Contest: Investment Strategy Optimization, won Second Class Prize
+        2020 – Investment Strategy Optimization
       </li>
       <li>
-        2020 – Mathematical Modelling Contest: Option Pricing Optimization based on Monte Carlo method, won First Class Prize
+        2020 – Option Pricing Optimization based on Monte Carlo method
       </li>
     </ul>
   </section>
@@ -211,9 +234,28 @@
       <a href="https://orcid.org/0009-0004-2223-3048" target="_blank">ORCID</a>; 
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" style="width:16px; vertical-align:middle;"> 
       <a href="https://www.linkedin.com/in/yingj1e-zhao-homepage/" target="_blank">LinkedIn</a>
-      <!-- margin-right:6px;内容区 -->
     </p>
   </section>
+
+  <!-- Back to Top button -->
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Show the button when user scrolls down 200px
+    window.onscroll = function() {
+      const btn = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // Scroll smoothly to top
+    function scrollToTop() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  </script>
 
 </body>
 </html>
