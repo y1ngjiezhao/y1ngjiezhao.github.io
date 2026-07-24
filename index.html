@@ -55,20 +55,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    body::before {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      content: "";
-      opacity: 0.22;
-      background-image:
-        linear-gradient(rgba(123, 151, 205, 0.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(123, 151, 205, 0.12) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, black, transparent 72%);
-    }
-
     a {
       color: var(--cyan);
       text-decoration-color: rgba(77, 229, 255, 0.4);
