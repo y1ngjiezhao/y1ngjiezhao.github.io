@@ -181,10 +181,11 @@
       z-index: -2;
       content: "";
       background:
-        linear-gradient(90deg, rgba(7, 11, 22, 0.98) 0%, rgba(7, 11, 22, 0.86) 50%, rgba(7, 11, 22, 0.76) 100%),
-        linear-gradient(180deg, rgba(7, 11, 22, 0.08), var(--bg)),
+        linear-gradient(90deg, rgba(7, 11, 22, 0.96) 0%, rgba(7, 11, 22, 0.82) 38%, rgba(7, 11, 22, 0.38) 74%, rgba(7, 11, 22, 0.16) 100%),
+        linear-gradient(180deg, rgba(7, 11, 22, 0.02) 0%, rgba(7, 11, 22, 0.12) 62%, var(--bg) 100%),
         url("banner.png") center / cover no-repeat;
-      opacity: 0.72;
+      opacity: 0.94;
+      filter: saturate(1.08) contrast(1.04);
     }
 
     .hero::after {
@@ -288,7 +289,9 @@
 
     .profile-card {
       position: relative;
-      padding: 16px;
+      justify-self: end;
+      width: min(100%, 280px);
+      padding: 22px;
       border: 1px solid rgba(161, 184, 224, 0.23);
       border-radius: 28px;
       background: linear-gradient(145deg, rgba(23, 35, 64, 0.88), rgba(10, 17, 32, 0.76));
@@ -309,9 +312,13 @@
     .avatar-wrap {
       position: relative;
       overflow: hidden;
-      aspect-ratio: 1 / 1.03;
-      border-radius: 20px;
+      width: min(100%, 168px);
+      aspect-ratio: 1;
+      margin: 0 auto;
+      border: 2px solid rgba(170, 235, 255, 0.52);
+      border-radius: 50%;
       background: var(--surface-strong);
+      box-shadow: 0 16px 42px rgba(0, 0, 0, 0.34), 0 0 0 7px rgba(77, 229, 255, 0.055);
     }
 
     .avatar {
@@ -321,6 +328,10 @@
       object-fit: cover;
       object-position: center;
       filter: saturate(0.88) contrast(1.03);
+    }
+
+    .profile-copy {
+      text-align: center;
     }
 
     .status {
@@ -648,14 +659,18 @@
         grid-template-columns: 150px minmax(0, 1fr);
         gap: 16px;
         align-items: center;
+        justify-self: start;
+        width: min(100%, 480px);
       }
 
       .avatar-wrap {
+        width: 132px;
         aspect-ratio: 1;
       }
 
       .profile-copy {
         min-width: 0;
+        text-align: left;
       }
 
       .content-section {
@@ -696,7 +711,7 @@
       }
 
       .avatar-wrap {
-        border-radius: 14px;
+        width: 92px;
       }
 
       .profile-meta {
