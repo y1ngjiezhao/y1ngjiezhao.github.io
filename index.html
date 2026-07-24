@@ -480,32 +480,34 @@
     }
 
     .experience-list {
-      --timeline-axis: 7px;
-      --timeline-gutter: 30px;
-      position: relative;
       display: grid;
       gap: 28px;
       margin: 0;
-      padding: 4px 0 4px var(--timeline-gutter);
+      padding: 4px 0;
       list-style: none;
     }
 
     .experience-list li {
-      position: relative;
+      display: grid;
+      grid-template-columns: 12px minmax(0, 1fr);
+      column-gap: 18px;
+      align-items: start;
       color: #c3cde0;
     }
 
     .experience-list li::before {
-      position: absolute;
-      top: calc((1.7em - 12px) / 2);
-      left: calc(var(--timeline-axis) - var(--timeline-gutter) - 6px);
       width: 12px;
       height: 12px;
+      margin-top: calc((1.7em - 12px) / 2 - 2px);
       border: 3px solid var(--bg);
       border-radius: 50%;
       content: "";
       background: var(--cyan);
       box-shadow: 0 0 14px rgba(77, 229, 255, 0.58);
+    }
+
+    .experience-copy {
+      min-width: 0;
     }
 
     .contact-grid {
@@ -864,21 +866,29 @@
       <div class="section-content">
         <ul class="experience-list">
           <li>
-            2025 – Research Project of
-            <a href="https://research.qut.edu.au/energytransition/" target="_blank" rel="noopener noreferrer">Energy Transition Centre</a>
-            as <strong>Research Assistant</strong> from 18/Aug to mid-Nov (work with
-            <a href="https://www.qut.edu.au/about/our-people/academic-profiles/sara.khalifa" target="_blank" rel="noopener noreferrer">A/Prof. Sara Kahlifa</a>
-            and other experts in ETC)
+            <div class="experience-copy">
+              2025 – Research Project of
+              <a href="https://research.qut.edu.au/energytransition/" target="_blank" rel="noopener noreferrer">Energy Transition Centre</a>
+              as <strong>Research Assistant</strong> from 18/Aug to mid-Nov (work with
+              <a href="https://www.qut.edu.au/about/our-people/academic-profiles/sara.khalifa" target="_blank" rel="noopener noreferrer">A/Prof. Sara Kahlifa</a>
+              and other experts in ETC)
+            </div>
           </li>
           <li>
-            2025 – Master Degree Capstone Project (under supervision of
-            <a href="https://sites.google.com/view/mahdiabolghasemi" target="_blank" rel="noopener noreferrer">Dr. Mahdi Abolghasemi</a> and
-            <a href="https://people.smp.uq.edu.au/XinGuo/" target="_blank" rel="noopener noreferrer">Dr. Xin Guo</a>)
+            <div class="experience-copy">
+              2025 – Master Degree Capstone Project (under supervision of
+              <a href="https://sites.google.com/view/mahdiabolghasemi" target="_blank" rel="noopener noreferrer">Dr. Mahdi Abolghasemi</a> and
+              <a href="https://people.smp.uq.edu.au/XinGuo/" target="_blank" rel="noopener noreferrer">Dr. Xin Guo</a>)
+            </div>
           </li>
-          <li>2024 – Mathematical Modelling Contest: Underwater Image Recovery and Augmentation</li>
           <li>
-            2024 – Summer Research Program (under supervision of
-            <a href="https://sites.google.com/view/mahdiabolghasemi" target="_blank" rel="noopener noreferrer">Dr. Mahdi Abolghasemi</a>)
+            <div class="experience-copy">2024 – Mathematical Modelling Contest: Underwater Image Recovery and Augmentation</div>
+          </li>
+          <li>
+            <div class="experience-copy">
+              2024 – Summer Research Program (under supervision of
+              <a href="https://sites.google.com/view/mahdiabolghasemi" target="_blank" rel="noopener noreferrer">Dr. Mahdi Abolghasemi</a>)
+            </div>
           </li>
         </ul>
       </div>
