@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Python_VSCode_Setup_Guide</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Python_VSCode_Setup_Guide</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#installing-python-and-vs-code"
+id="toc-installing-python-and-vs-code">Installing Python and VS Code</a>
+<ul>
+<li><a href="#dsb102-introduction-to-machine-learning-s2-2026"
+id="toc-dsb102-introduction-to-machine-learning-s2-2026">DSB102
+Introduction to Machine Learning | S2 2026</a></li>
+<li><a href="#step-1-install-python" id="toc-step-1-install-python">Step
+1 — Install Python</a>
+<ul>
+<li><a href="#windows" id="toc-windows">Windows</a></li>
+<li><a href="#mac" id="toc-mac">Mac</a></li>
+</ul></li>
+<li><a href="#step-2-install-vs-code"
+id="toc-step-2-install-vs-code">Step 2 — Install VS Code</a></li>
+<li><a href="#step-3-install-the-vs-code-extensions"
+id="toc-step-3-install-the-vs-code-extensions">Step 3 — Install the VS
+Code extensions</a></li>
+<li><a href="#step-4-install-the-python-packages-youll-need"
+id="toc-step-4-install-the-python-packages-youll-need">Step 4 — Install
+the Python packages you’ll need</a></li>
+<li><a href="#step-5-test-that-everything-works"
+id="toc-step-5-test-that-everything-works">Step 5 — Test that everything
+works</a></li>
+<li><a href="#troubleshooting"
+id="toc-troubleshooting">Troubleshooting</a></li>
+<li><a href="#getting-help" id="toc-getting-help">Getting help</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="installing-python-and-vs-code">Installing Python and VS
+Code</h1>
+<h2 id="dsb102-introduction-to-machine-learning-s2-2026">DSB102
+Introduction to Machine Learning | S2 2026</h2>
+<p>This guide gets your own laptop ready for the workshops and the Lab
+Assessment. You need two things installed: <strong>Python</strong> (the
+language) and <strong>VS Code</strong> (the editor you’ll write and run
+it in). Do this before your first workshop if you can — it takes about
+15–20 minutes.</p>
+<p>You only need to do this once. The lab computers already have
+everything installed, so this guide is for your own laptop only.</p>
+<hr />
+<h2 id="step-1-install-python">Step 1 — Install Python</h2>
+<h3 id="windows">Windows</h3>
+<ol type="1">
+<li><p>Go to <strong><a
+href="https://www.python.org/downloads/">python.org/downloads</a></strong>
+and click the yellow <strong>“Download Python”</strong> button.</p></li>
+<li><p>Run the installer.</p></li>
+<li><p><strong>Important:</strong> on the very first screen, tick the
+box at the bottom that says <strong>“Add python.exe to PATH”</strong>.
+This is the single most common thing people forget, and it will cause
+problems later if you skip it.</p></li>
+<li><p>Click <strong>Install Now</strong> and let it finish.</p></li>
+<li><p>Check it worked: open the <strong>Start Menu</strong>, type
+<code>cmd</code>, press Enter to open Command Prompt, then type:</p>
+<pre><code>python --version</code></pre>
+<p>You should see something like <code>Python 3.12.x</code>. If instead
+you get “not recognised”, see Troubleshooting below.</p></li>
+</ol>
+<h3 id="mac">Mac</h3>
+<ol type="1">
+<li><p>Go to <strong><a
+href="https://www.python.org/downloads/">python.org/downloads</a></strong>
+and download the macOS installer (the yellow button).</p></li>
+<li><p>Open the downloaded <code>.pkg</code> file and go through the
+installer with the default options.</p></li>
+<li><p>Check it worked: open <strong>Terminal</strong> (press
+<code>Cmd+Space</code>, type “Terminal”, press Enter), then type:</p>
+<pre><code>python3 --version</code></pre>
+<p>You should see something like <code>Python 3.12.x</code>. On a Mac,
+always use <code>python3</code>, not <code>python</code> — plain
+<code>python</code> may point to an old system version or nothing at
+all.</p></li>
+</ol>
+<hr />
+<h2 id="step-2-install-vs-code">Step 2 — Install VS Code</h2>
+<p>Same for both Windows and Mac:</p>
+<ol type="1">
+<li>Go to <strong><a
+href="https://code.visualstudio.com">code.visualstudio.com</a></strong>
+and click the big <strong>Download</strong> button — it will detect your
+operating system automatically.</li>
+<li>Run the installer with the default options.</li>
+<li>Open VS Code once it’s installed to confirm it launches.</li>
+</ol>
+<hr />
+<h2 id="step-3-install-the-vs-code-extensions">Step 3 — Install the VS
+Code extensions</h2>
+<p>Inside VS Code:</p>
+<ol type="1">
+<li>Click the <strong>Extensions</strong> icon in the left-hand sidebar
+(it looks like four small squares, one detached).</li>
+<li>Search for <strong>“Python”</strong> (published by Microsoft) and
+click <strong>Install</strong>.</li>
+<li>Search for <strong>“Jupyter”</strong> (published by Microsoft) and
+click <strong>Install</strong>.</li>
+</ol>
+<p>That’s it — these two extensions let VS Code run both
+<code>.ipynb</code> notebooks and <code>.py</code> files
+cell-by-cell.</p>
+<hr />
+<h2 id="step-4-install-the-python-packages-youll-need">Step 4 — Install
+the Python packages you’ll need</h2>
+<p>Open a terminal <strong>inside VS Code</strong>: menu
+<strong>Terminal → New Terminal</strong>. Then run:</p>
+<p><strong>Windows:</strong></p>
+<pre><code>pip install numpy pandas matplotlib scikit-learn scipy statsmodels jupyter</code></pre>
+<p><strong>Mac:</strong></p>
+<pre><code>pip3 install numpy pandas matplotlib scikit-learn scipy statsmodels jupyter</code></pre>
+<p>This will take a minute or two. A few weeks (e.g. the neural networks
+workshop) need one extra package, <code>tensorflow</code> — you’ll be
+told when that’s needed, and the same
+<code>pip</code>/<code>pip3 install</code> pattern applies.</p>
+<hr />
+<h2 id="step-5-test-that-everything-works">Step 5 — Test that everything
+works</h2>
+<ol type="1">
+<li><p>Create a new file called <code>test.py</code> anywhere convenient
+(e.g. your Desktop) and open it in VS Code.</p></li>
+<li><p>Type the following into it:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">&quot;x&quot;</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], <span class="st">&quot;y&quot;</span>: [<span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>]})</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>df.plot(x<span class="op">=</span><span class="st">&quot;x&quot;</span>, y<span class="op">=</span><span class="st">&quot;y&quot;</span>, marker<span class="op">=</span><span class="st">&quot;o&quot;</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div></li>
+<li><p>VS Code should show a <strong>“Run Cell”</strong> link just above
+the <code># %%</code> line — click it (or press
+<code>Shift+Enter</code>).</p></li>
+<li><p>The first time you run a cell, VS Code may ask you to
+<strong>select a Python interpreter</strong> — choose the one that shows
+a version number (e.g. “Python 3.12.x”).</p></li>
+<li><p>You should see a small table printed and a line chart appear in a
+new panel.</p></li>
+</ol>
+<p>If you see the table and the chart, you’re fully set up. Delete
+<code>test.py</code> — it was only for testing.</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows:
+<code>'python' is not recognized as an internal or external command</code></td>
+<td>You likely missed the “Add python.exe to PATH” checkbox during
+install. Uninstall Python, reinstall, and make sure to tick that box
+this time.</td>
+</tr>
+<tr>
+<td>Mac: <code>command not found: python</code></td>
+<td>Use <code>python3</code> instead of <code>python</code> — this is
+normal and expected on a Mac. Same for <code>pip3</code> instead of
+<code>pip</code>.</td>
+</tr>
+<tr>
+<td>VS Code doesn’t show “Run Cell” above <code># %%</code></td>
+<td>The Jupyter extension isn’t installed, or VS Code needs a restart
+after installing it. Check Step 3.</td>
+</tr>
+<tr>
+<td>Running a cell asks you to “select a kernel” or “select interpreter”
+and nothing shows up</td>
+<td>Python itself isn’t installed correctly, or VS Code can’t find it —
+redo Step 1, then fully close and reopen VS Code.</td>
+</tr>
+<tr>
+<td><code>pip install</code> fails with a permissions error</td>
+<td>Add <code>--user</code> to the command,
+e.g. <code>pip install --user numpy pandas matplotlib scikit-learn scipy statsmodels jupyter</code>.</td>
+</tr>
+<tr>
+<td><code>ModuleNotFoundError: No module named 'pandas'</code> (or
+similar) when running a cell</td>
+<td>The packages installed to a different Python than the one VS Code is
+using. Open the Command Palette (<code>Ctrl+Shift+P</code> /
+<code>Cmd+Shift+P</code>) → <strong>“Python: Select
+Interpreter”</strong> and make sure the same Python version is selected
+everywhere, then reinstall the packages from Step 4 using that
+interpreter’s terminal.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="getting-help">Getting help</h2>
+<p>If you’re stuck after trying the table above, bring your laptop to
+the next workshop — setup help is part of what the early workshops are
+for — or post your exact error message on the Canvas discussion
+board.</p>
+<p><em>This setup is required for the workshops and for the Lab
+Assessment, which is done in VS Code (not Google Colab or Jupyter in a
+browser).</em></p>
+</body>
+</html>
