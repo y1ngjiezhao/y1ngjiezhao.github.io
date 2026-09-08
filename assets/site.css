@@ -420,7 +420,7 @@ footer { align-items:center; }
   .about-header { grid-template-columns:minmax(0,1fr); gap:26px; align-items:start; }
   .landscape { width:100%; max-width:460px; }
 }
-.about-body { max-width:780px; }
+.about-body { width:100%; max-width:none; }
 .academic-bio { font-size:16px; line-height:1.8; overflow-wrap:break-word; }
 .academic-bio p { margin:0 0 20px; }
 .academic-bio a { text-decoration:none; }
@@ -445,5 +445,3 @@ footer { align-items:center; }
   .resource, .item-card { break-inside:avoid; }
 }
 
-.image-credit { width:min(calc(100% - 40px),var(--width)); margin:0 auto; padding:0 0 24px; text-align:center; font-size:12px; line-height:1.7; color:var(--muted); }
-.image-credit a { color:inherit; }
