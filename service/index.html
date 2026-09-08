@@ -25,64 +25,29 @@
 <button class="theme-button" type="button" aria-label="Switch to dark mode" aria-pressed="false" hidden><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
 <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false" hidden>Menu</button></div>
 </nav></header>
-<main id="main-content" tabindex="-1">
-    <section aria-labelledby="page-title">
-      <p class="eyebrow">Teaching · Resources · Support</p>
-      <h1 id="page-title">Service</h1>
-      <p class="lead">
-        A collection of practical resources supporting my teaching, research, and academic service.
-        Current materials are prepared for students in DSB102 Introduction to Machine Learning.
-      </p>
-    </section>
-
-    <section class="service-grid" aria-label="Current teaching and resources">
-      <article class="card">
-        <p class="card-label">Current teaching</p>
-        <h2>DSB102</h2>
-        <p class="course-name">Introduction to Machine Learning</p>
-        <dl class="details">
-          <div>
-            <dt>Semester</dt>
-            <dd>Semester 2, 2026</dd>
-          </div>
-          <div>
-            <dt>Role</dt>
-            <dd>Tutor</dd>
-          </div>
-          <div>
-            <dt>Focus</dt>
-            <dd>Practical machine learning foundations</dd>
-          </div>
-        </dl>
-      </article>
-
-      <article class="card">
-        <p class="card-label">Student resource</p>
-        <h2>Python &amp; VS Code Setup Guide</h2>
-        <p class="resource-copy">
-          A step-by-step HTML guide to help DSB102 students prepare Python and Visual Studio Code
-          for coursework and practical sessions.
-        </p>
-        <div class="meta-row" aria-label="Resource details">
-          <span>HTML</span>
-          <span>Python setup</span>
-          <span>VS Code</span>
-          <span>DSB102</span>
+<main id="main-content" class="service-page" tabindex="-1">
+  <header class="service-heading">
+    <h1>Service</h1>
+    <p>Teaching &amp; resources</p>
+  </header>
+  <section class="teaching" aria-labelledby="course-title">
+    <div class="teaching-heading">
+      <p class="teaching-term">Semester 2, 2026 <span>· Tutor</span></p>
+      <h2 id="course-title"><span class="course-code">DSB102</span>Introduction to Machine Learning</h2>
+    </div>
+    <ul class="resource-list" aria-label="Course resources">
+      <li class="resource">
+        <div class="resource-info">
+          <h3>Python &amp; VS Code Setup Guide</h3>
+          <p>Set up your environment for practical sessions.</p>
         </div>
-        <div class="actions">
-          <a class="button button-primary" href="../downloads/Python_VSCode_Setup_Guide.html" download>
-            Download HTML guide ↓
-          </a>
-          <a class="button button-secondary" href="../downloads/Python_VSCode_Setup_Guide.html" target="_blank" rel="noopener noreferrer">
-            View online ↗
-          </a>
+        <div class="resource-actions">
+          <a href="../downloads/Python_VSCode_Setup_Guide.html" target="_blank" rel="noopener noreferrer">View guide <span aria-hidden="true">↗</span></a>
+          <a href="../downloads/Python_VSCode_Setup_Guide.html" download aria-label="Download Python and VS Code Setup Guide">Download <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="note">
-          <span class="note-dot" aria-hidden="true"></span>
-          <span>Save the downloaded file, then open it in any modern web browser. No internet connection is required after download.</span>
-        </div>
-      </article>
-    </section>
-  </main>
+      </li>
+    </ul>
+  </section>
+</main>
 <footer><span>© 2026 Yingjie Zhao</span><span>Data Science · QUT · Brisbane</span><a href="mailto:yingjie.zhao@hdr.qut.edu.au">Get in touch <span aria-hidden="true">↗</span></a></footer>
 </body></html>
