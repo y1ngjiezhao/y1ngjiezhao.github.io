@@ -413,7 +413,7 @@ footer { align-items:center; }
 .about-contact address { margin-top:8px; font-size:14px; font-style:normal; line-height:1.7; color:var(--muted); }
 .profile-photo { display:block; position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .landscape { margin:0; min-width:0; }
-.landscape img { display:block; width:100%; height:auto; border-radius:4px; }
+.landscape img { display:block; width:100%; aspect-ratio:188 / 125; height:auto; object-fit:contain; border-radius:4px; }
 .landscape figcaption { margin-top:10px; font-size:12px; color:var(--muted); line-height:1.7; }
 .landscape figcaption a { color:inherit; }
 @media(max-width:800px) {
@@ -452,4 +452,10 @@ footer { align-items:center; }
 .image-credit { flex-basis:100%; width:100%; margin:0; padding:0; text-align:left; font-size:12px; line-height:1.7; color:var(--muted); }
 .image-credit a { color:inherit; }
 
-.footer-with-credit { flex-wrap:wrap; row-gap:10px; }
+/* Keep the original copyright/social/contact row separate from attribution. */
+.footer-with-credit { display:block; }
+.footer-main { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.footer-with-credit .image-credit { margin-top:10px; max-width:100%; overflow-wrap:anywhere; }
+@media(max-width:480px) {
+  .footer-main { flex-wrap:wrap; gap:8px 16px; }
+}
