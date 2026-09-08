@@ -532,24 +532,32 @@ footer a {
   }
 }
 
-/* Contact information now lives beside the homepage introduction. */
+/* Profile links and affiliation share the portrait's left alignment. */
 .hero { align-items:start; }
-.profile-links {
-  width:auto;
-  min-height:0;
-  margin:32px 0 0;
-  padding:0;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:flex-start;
-  gap:10px 22px;
+.portrait figcaption { margin-top:12px; }
+.profile-links { display:flex; align-items:center; gap:8px; margin:0 0 12px; }
+.portrait .profile-links a {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  margin:0;
+  color:var(--muted);
+  border-radius:6px;
 }
-.profile-links a { font-size:14px; color:var(--muted); text-decoration:none; }
-.profile-links a:hover { color:var(--accent); text-decoration:underline; }
-.profile-emails { margin-bottom:16px; }
-.portrait .profile-emails a { margin-bottom:2px; }
-.affiliation { margin-bottom:10px; }
+.portrait .profile-links a:hover { color:var(--accent); background:var(--soft); }
+.portrait .profile-icon {
+  display:block;
+  width:20px;
+  height:20px;
+  background:currentColor;
+  -webkit-mask:var(--icon) center / contain no-repeat;
+  mask:var(--icon) center / contain no-repeat;
+}
+.icon-google-scholar { --icon:url('./icons/google-scholar.svg'); }
+.icon-orcid { --icon:url('./icons/orcid.svg'); }
+.icon-linkedin { --icon:url('./icons/linkedin.svg'); }
+.portrait .profile-email { margin-bottom:22px; }
+.affiliation { color:var(--text); font-weight:500; line-height:1.6; margin-bottom:10px; }
 .portrait address { font-style:normal; font-size:13px; line-height:1.8; }
-@media(max-width:600px) {
-  .profile-links { margin-top:24px; }
-}
