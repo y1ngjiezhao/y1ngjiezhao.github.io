@@ -449,5 +449,7 @@ footer { align-items:center; }
   .academic-bio { text-align:justify; hyphens:auto; }
 }
 
-.image-credit { width:min(calc(100% - 40px),var(--width)); margin:0 auto; padding:0 0 24px; text-align:center; font-size:12px; line-height:1.7; color:var(--muted); }
+.image-credit { flex-basis:100%; width:100%; margin:0; padding:0; text-align:left; font-size:12px; line-height:1.7; color:var(--muted); }
 .image-credit a { color:inherit; }
+
+.footer-with-credit { flex-wrap:wrap; row-gap:10px; }
