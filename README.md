@@ -4,11 +4,10 @@ A static, multipage website for GitHub Pages. No build tools or third-party fron
 
 ## Pages
 
-- `/` — introduction and links to research, experience and teaching
+- `/` — introduction, contact details, academic profiles and links to research, experience and teaching
 - `/about/` — biography and research interests
 - `/publications/` — journal preprints and conference publications
 - `/experience/` — research and academic experience
-- `/contact/` — academic profiles and contact details
 - `/service/` — teaching information and downloadable resources
 
 Shared presentation lives in `assets/site.css`. `assets/theme.js` restores the saved theme before rendering; `assets/site.js` manages the theme button, mobile navigation and redirects from old homepage section links. New visitors see the light theme. Navigation and content remain available without JavaScript.

@@ -40,5 +40,5 @@ document.addEventListener('click', event => { if (!event.target.closest('nav')) 
 // Preserve incoming links to sections from the previous homepage.
 if (location.pathname === '/' || location.pathname === '/index.html') {
   const section = location.hash.slice(1);
-  if (['about', 'publications', 'experience', 'contact'].includes(section)) location.replace('./' + section + '/');
+  if (['about', 'publications', 'experience'].includes(section)) location.replace('./' + section + '/');
 }
