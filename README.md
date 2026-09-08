@@ -4,8 +4,8 @@ A static, multipage website for GitHub Pages. No build tools or third-party fron
 
 ## Pages
 
-- `/` — introduction, contact details, academic profiles and links to research, experience and teaching
-- `/about/` — biography and research interests
+- `/` — About: biography, research interests, education, academic profiles and contact details
+- `/about/` — redirects to the merged About page at `/`
 - `/publications/` — journal preprints and conference publications
 - `/experience/` — research and academic experience
 - `/service/` — teaching information and downloadable resources

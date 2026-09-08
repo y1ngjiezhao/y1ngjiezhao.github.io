@@ -392,7 +392,7 @@ footer a {
 /* Academic homepage: a continuous reading column with a compact profile. */
 .academic-home { max-width:900px; padding-top:64px; }
 .academic-layout { display:grid; grid-template-columns:minmax(0,1fr) 200px; gap:56px; align-items:start; }
-.academic-heading { margin-bottom:30px; }
+.academic-heading { margin-bottom:36px; padding-bottom:28px; border-bottom:1px solid var(--line); }
 .academic-heading h1 { font-family:Georgia,"Times New Roman",serif; font-size:48px; font-weight:400; letter-spacing:-.035em; margin:0 0 12px; line-height:1.15; }
 .academic-role { margin:0 0 2px; font-size:17px; }
 .academic-affiliation { color:var(--muted); margin:0; font-size:15px; }
@@ -400,7 +400,6 @@ footer a {
 .academic-bio p { margin-bottom:18px; }
 .academic-bio a { text-decoration:none; }
 .academic-bio a:hover { text-decoration:underline; }
-.biography-link { display:inline-block; font-size:14px; margin-top:2px; }
 .home-education { margin-top:34px; }
 .home-education h2 { font-size:24px; font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spacing:-.02em; margin-bottom:18px; }
 .home-education dl { margin:0; }
@@ -425,9 +424,10 @@ footer a {
   .academic-heading { margin-bottom:24px; }
   .academic-heading h1 { font-size:40px; }
   .academic-profile {
+    order:-1;
     width:100%;
-    border-top:1px solid var(--line);
-    padding-top:26px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:24px;
     display:grid;
     grid-template-columns:100px minmax(0,1fr);
     column-gap:22px;
