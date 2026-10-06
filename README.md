@@ -8,6 +8,7 @@ A static, multipage website for GitHub Pages. No build tools or third-party fron
 - `/about/` — redirects to the merged About page at `/`
 - `/publications/` — journal preprints and conference publications
 - `/experience/` — research and academic experience
+- `/talks/` — seminar slides, with online viewing and downloads
 - `/service/` — teaching information and downloadable resources
 
 Shared presentation lives in `assets/site.css`. `assets/theme.js` restores the saved theme before rendering; `assets/site.js` manages the theme button, mobile navigation and redirects from old homepage section links. New visitors see the light theme. Navigation and content remain available without JavaScript.

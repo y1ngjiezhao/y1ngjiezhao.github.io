@@ -459,3 +459,7 @@ footer { align-items:center; }
 @media(max-width:480px) {
   .footer-main { flex-wrap:wrap; gap:8px 16px; }
 }
+
+.resource .talk-title { font-size:18px; font-weight:550; line-height:1.5; margin:0; }
+.talk-title a { color:var(--text); text-decoration:none; }
+.talk-title a:hover { color:var(--accent); text-decoration:underline; }
