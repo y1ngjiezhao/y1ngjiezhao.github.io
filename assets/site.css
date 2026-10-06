@@ -460,6 +460,9 @@ footer { align-items:center; }
   .footer-main { flex-wrap:wrap; gap:8px 16px; }
 }
 
-.resource .talk-title { font-size:18px; font-weight:550; line-height:1.5; margin:0; }
-.talk-title a { color:var(--text); text-decoration:none; }
-.talk-title a:hover { color:var(--accent); text-decoration:underline; }
+.resource.talk-entry { display:block; padding-block:28px; }
+.talk-entry .talk-date { display:flex; flex-wrap:wrap; gap:4px 20px; margin:0 0 12px; font-size:13px; line-height:1.6; font-variant-numeric:tabular-nums; }
+.talk-date > span { white-space:nowrap; }
+.talk-entry .talk-title { max-width:680px; margin:0; font-size:clamp(20px,2.5vw,24px); font-weight:550; line-height:1.4; letter-spacing:-.02em; text-wrap:balance; }
+.talk-entry .resource-actions { flex-wrap:wrap; gap:4px 24px; margin-top:14px; }
+.talk-entry .resource-actions a { display:inline-flex; align-items:center; min-height:44px; }
