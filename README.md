@@ -21,4 +21,6 @@ Run `python3 -m http.server 8000` from this directory and open `http://localhost
 
 The files can be served directly by GitHub Pages from the repository's configured publishing branch. Local edits do not update the public site until pushed to that branch.
 
-`downloads/` retains the existing teaching guide. Older alternative homepages and image assets are preserved.
+`downloads/` retains the teaching guide, and `talks/yjz_confirmation_seminar.html` retains the linked seminar slides. The `/about/` redirect and legacy section-link redirects remain for incoming links. Portrait, active landscape, social-preview image, icon files and their attribution are part of the current site.
+
+Unused alternative homepage and image files have been removed from the current tree. Earlier versions remain recoverable from Git history.
