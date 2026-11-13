@@ -473,16 +473,13 @@ footer a {
 /* Social links follow the copyright, leaving the primary navigation unchanged. */
 footer { align-items:center; }
 .footer-identity { display:flex; align-items:center; flex-wrap:wrap; gap:6px 12px; min-width:0; max-width:100%; }
-.profile-links { display:flex; gap:0; margin:0; }
-.profile-links a { display:inline-flex; align-items:center; justify-content:center; width:44px; min-height:44px; color:var(--muted); border-radius:4px; }
+.profile-links { display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin:0; max-width:100%; }
+.profile-links a { display:inline-flex; align-items:center; justify-content:center; flex:0 0 22px; width:22px; height:22px; min-height:0; padding:0; border:1px solid var(--line); border-radius:50%; color:var(--muted); text-decoration:none; line-height:1; }
 .profile-links a:hover { color:var(--accent); background:var(--soft); }
-.profile-icon { display:block; width:16px; height:16px; background:currentColor; -webkit-mask:var(--icon) center / contain no-repeat; mask:var(--icon) center / contain no-repeat; }
+.profile-icon { display:block; width:12px; height:12px; background:currentColor; -webkit-mask:var(--icon) center / contain no-repeat; mask:var(--icon) center / contain no-repeat; }
 .icon-google-scholar { --icon:url('./icons/google-scholar.svg'); }
 .icon-orcid { --icon:url('./icons/orcid.svg'); }
 .icon-linkedin { --icon:url('./icons/linkedin.svg'); }
-.profile-links-labeled { flex-wrap:wrap; gap:6px; margin:0; max-width:100%; }
-.profile-links-labeled a { width:auto; min-height:0; gap:4px; padding:1px 5px; border:1px solid var(--line); font-size:inherit; line-height:1.5; text-decoration:none; }
-.profile-links-labeled .profile-icon { width:1em; height:1em; }
 footer > a, .footer-main > a { display:inline-flex; align-items:center; min-height:0; }
 .academic-home { padding-top:52px; }
 .about-header { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:36px; align-items:start; padding-bottom:32px; margin-bottom:30px; border-bottom:1px solid var(--line); }
