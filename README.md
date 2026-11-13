@@ -13,7 +13,7 @@ A static, multipage website for GitHub Pages. No build tools or third-party fron
 
 Shared presentation lives in `assets/site.css`. `assets/theme.js` restores the saved theme before rendering; `assets/site.js` manages the theme button, mobile navigation and redirects from old homepage section links. New visitors see the light theme. Navigation and content remain available without JavaScript.
 
-The homepage uses 640- and 960-pixel WebP landscape images with responsive selection. Keep the existing image attribution when replacing or re-encoding that photograph. Research interests and labeled academic profile links appear near the identity block; publications and experience use separate title, date and supporting-detail styles.
+The homepage uses 640- and 960-pixel WebP landscape images with responsive selection. Keep the existing image attribution when replacing or re-encoding that photograph. Research interests appear in the biography. Labeled academic profile links replace the small footer icons on every main page. Body copy uses the full shared content width, with justified paragraphs on wider screens and natural wrapping on phones; publications and experience retain separate title, date and supporting-detail styles.
 
 ## Local preview
 
