@@ -204,7 +204,7 @@ footer {
   display:flex;
   justify-content:space-between;
   gap:16px;
-  padding-block:28px;
+  padding-block:10px 16px;
   border-top:1px solid var(--line);
   font-size:12px;
   color:var(--muted)
@@ -472,7 +472,7 @@ footer a {
 
 /* Social links follow the copyright, leaving the primary navigation unchanged. */
 footer { align-items:center; }
-.footer-identity { display:flex; align-items:center; flex-wrap:wrap; gap:8px 16px; min-width:0; max-width:100%; }
+.footer-identity { display:flex; align-items:center; flex-wrap:wrap; gap:6px 12px; min-width:0; max-width:100%; }
 .profile-links { display:flex; gap:0; margin:0; }
 .profile-links a { display:inline-flex; align-items:center; justify-content:center; width:44px; min-height:44px; color:var(--muted); border-radius:4px; }
 .profile-links a:hover { color:var(--accent); background:var(--soft); }
@@ -480,9 +480,10 @@ footer { align-items:center; }
 .icon-google-scholar { --icon:url('./icons/google-scholar.svg'); }
 .icon-orcid { --icon:url('./icons/orcid.svg'); }
 .icon-linkedin { --icon:url('./icons/linkedin.svg'); }
-.profile-links-labeled { flex-wrap:wrap; gap:8px; margin:0; max-width:100%; }
-.profile-links-labeled a { width:auto; gap:6px; padding:6px 9px; border:1px solid var(--line); font-size:13px; text-decoration:none; }
-footer > a, .footer-main > a { display:inline-flex; align-items:center; min-height:44px; }
+.profile-links-labeled { flex-wrap:wrap; gap:6px; margin:0; max-width:100%; }
+.profile-links-labeled a { width:auto; min-height:0; gap:4px; padding:1px 5px; border:1px solid var(--line); font-size:inherit; line-height:1.5; text-decoration:none; }
+.profile-links-labeled .profile-icon { width:1em; height:1em; }
+footer > a, .footer-main > a { display:inline-flex; align-items:center; min-height:0; }
 .academic-home { padding-top:52px; }
 .about-header { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:36px; align-items:start; padding-bottom:32px; margin-bottom:30px; border-bottom:1px solid var(--line); }
 .about-identity { min-width:0; }
@@ -540,7 +541,7 @@ footer > a, .footer-main > a { display:inline-flex; align-items:center; min-heig
 /* Keep the original copyright/social/contact row separate from attribution. */
 .footer-with-credit { display:block; }
 .footer-main { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-.footer-with-credit .image-credit { margin-top:10px; max-width:100%; overflow-wrap:anywhere; }
+.footer-with-credit .image-credit { margin-top:8px; max-width:100%; overflow-wrap:anywhere; }
 @media(max-width:480px) {
   .footer-main { flex-wrap:wrap; gap:8px 16px; }
 }
