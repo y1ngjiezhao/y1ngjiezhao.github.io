@@ -474,7 +474,7 @@ footer a {
 footer { align-items:center; }
 .footer-identity { display:flex; align-items:center; flex-wrap:wrap; gap:6px 12px; min-width:0; max-width:100%; }
 .profile-links { display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin:0; max-width:100%; }
-.profile-links a { display:inline-flex; align-items:center; justify-content:center; flex:0 0 22px; width:22px; height:22px; min-height:0; padding:0; border:1px solid var(--line); border-radius:50%; color:var(--muted); text-decoration:none; line-height:1; }
+.profile-links a { display:inline-flex; align-items:center; justify-content:center; flex:0 0 20px; width:20px; height:20px; min-height:0; padding:0; border:1px solid var(--line); border-radius:50%; color:var(--muted); text-decoration:none; line-height:1; }
 .profile-links a:hover { color:var(--accent); background:var(--soft); }
 .profile-icon { display:block; width:12px; height:12px; background:currentColor; -webkit-mask:var(--icon) center / contain no-repeat; mask:var(--icon) center / contain no-repeat; }
 .icon-google-scholar { --icon:url('./icons/google-scholar.svg'); }
